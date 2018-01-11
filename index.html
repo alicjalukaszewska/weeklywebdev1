@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Weekly Web Dev Challenge 1</title>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,20 +17,22 @@
 					<h2>Register Form</h2>
 				</header>
 				<form class="register" method="post">
-					<input type="text" placeholder="Username">
-					<input type="password" placeholder="Password">
-					<input type="password" placeholder="Password">
-					<input type="email" placeholder="Email">
-					<select>
-						<option value="" disabled selected>Select your option</option>
+					<input class="user" type="text" placeholder="Username">
+					<input class="password" type="password" placeholder="Password">
+					<input class="password" type="password" placeholder="Confirm Password">
+					<input class="email" type="email" placeholder="Email">
+					<select class="location">
+						<option  value="" disabled selected>Your location</option>
 						<option value="ny">New York</option>
 						<option value="warsaw">Warsaw</option>
 						<option value="berlin">Berlin</option>
 						<option value="tokyo">Tokyo</option>
 					</select>
-					<input type="radio" id="terms">
-					<label for="terms">I have read and accept the terms of use.</label>
-					<button type="submit">Sign up</button>
+					<div class="terms">
+						<input type="radio" id="terms">
+						<label for="terms"><span>I have read and accept the terms of use.</span></label>
+					</div>
+					<button class="submit" type="submit">Sign up</button>
 
 				</form>
 			</div>

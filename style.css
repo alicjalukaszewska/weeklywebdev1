@@ -6,11 +6,12 @@
 
 body {
 	background-color: white;
-	background-image: url('background.jpg');
+	background-image: url('img/background.jpg');
 	background-position: top center;
 	background-repeat: no-repeat;
-	font-family: sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	font-size: 16px;
+	letter-spacing: 1px;
 	color:  #afafaf;
 }
 
@@ -18,25 +19,43 @@ body > header {
 	margin-top: 35px;
 	height: 111px;
 	text-align: center;
-	background-image: url('logo.png');
+	background-image: url('img/logo.png');
 	mix-blend-mode: soft-light;
 	background-repeat: no-repeat;
 	background-position: top center;
 }
 
 .wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .column {
 	width:  420px;
 }
 
+form {
+	border-radius: 5px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(56%, rgba(248,248,248,1)),color-stop(100%, rgba(243,243,243,1)),to(rgba(243,243,243,1)));
+	background: linear-gradient(to bottom, rgba(248,248,248,1) 56%,rgba(243,243,243,1) 100%,rgba(243,243,243,1) 100%);
+}
+
 .register-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 
 }
 
@@ -47,20 +66,37 @@ form.register {
 }
 
 input, select {
-	width: 100%;
+	padding-left:  80px;
+	width: calc(100% - 80px);
 	height: 40px;
 	margin: 20px 0;	
 	font-size: 16px;
-	font-weight: bold;
+	letter-spacing: 1px;
 	color:  inherit;
-	border: 1px solid  #afafaf;
+	border: 1px solid #c6c6c6;
 	border-radius: 5px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(56%, rgba(248,248,248,1)),color-stop(100%, rgba(243,243,243,1)),to(rgba(243,243,243,1)));
+	background: linear-gradient(to bottom, rgba(248,248,248,1) 56%,rgba(243,243,243,1) 100%,rgba(243,243,243,1) 100%);
+	background-repeat: no-repeat;
+	background-position: 15px center;
 }
 
-input {
-
-
+input::-webkit-input-placeholder {
+	opacity: 1;
 }
+
+input:-ms-input-placeholder {
+	opacity: 1;
+}
+
+input::-ms-input-placeholder {
+	opacity: 1;
+}
+
+input::placeholder {
+	opacity: 1;
+}
+
 
 select {
 	color: inherit;
@@ -69,4 +105,41 @@ select {
 
 select:invalid { 
 	color: gray; 
+}
+
+.user {
+	background-image: url('img/icons/user.svg');
+}
+
+.password {
+	background-image: url('img/icons/lock.svg');
+}
+
+.email {
+	background-image: url('img/icons/email.svg');
+}
+
+.location {
+	background-image: url('img/icons/location.svg');
+}
+
+.terms {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	width: 100%;
+}
+
+.terms input {
+	width: auto;
+}
+
+.submit {
+	height: 50px;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(173,220,84,1)),to(rgba(126,195,31,1)));
+	background: linear-gradient(to bottom, rgba(173,220,84,1) 0%,rgba(126,195,31,1) 100%);
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 24px;
 }
