@@ -17,21 +17,36 @@
 					<h2>Register Form</h2>
 				</header>
 				<form class="register" method="post">
-					<input class="user" type="text" placeholder="Username">
-					<input class="password" type="password" placeholder="Password">
-					<input class="password" type="password" placeholder="Confirm Password">
-					<input class="email" type="email" placeholder="Email">
-					<select class="location">
-						<option  value="" disabled selected>Your location</option>
-						<option value="ny">New York</option>
-						<option value="warsaw">Warsaw</option>
-						<option value="berlin">Berlin</option>
-						<option value="tokyo">Tokyo</option>
-					</select>
-					<div class="terms">
-						<input type="radio" id="terms">
+					<p>
+						<label class="visuallyhidden" for="user">Username:</label>
+						<span><input class="user" type="text" placeholder="Username" id="user"></span>
+					</p>
+					<p>
+						<label class="visuallyhidden" for="password">Password:</label>
+						<span><input class="password" type="password" placeholder="Password" id="password"></span>
+					</p>
+					<p>
+						<label class="visuallyhidden" for="passconfirm">Confirm Password:</label>
+						<span><input class="password" type="password" placeholder="Confirm Password" id="passconfirm"></span>
+					</p>
+					<p>
+						<label class="visuallyhidden" for="email">Email:</label>
+						<span><input class="email" type="email" placeholder="Email" id="email"></span>
+					</p>
+					<p>
+						<label class="visuallyhidden" for="location">Location:</label>
+						<span><select class="location" id="location"></span>
+							<option  value="" disabled selected>Your location</option>
+							<option value="ny">New York</option>
+							<option value="warsaw">Warsaw</option>
+							<option value="berlin">Berlin</option>
+							<option value="tokyo">Tokyo</option>
+						</select>
+					</p>
+					<p class="terms">
+						<input type="checkbox" id="terms">
 						<label for="terms"><span>I have read and accept the terms of use.</span></label>
-					</div>
+					</p>
 					<button class="submit" type="submit">Sign up</button>
 
 				</form>
