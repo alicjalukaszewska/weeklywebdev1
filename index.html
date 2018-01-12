@@ -16,7 +16,7 @@
 				<header>
 					<h2>Register Form</h2>
 				</header>
-				<form class="register" method="post">
+				<form class="register" method="">
 					<p>
 						<label class="visuallyhidden" for="user">Username:</label>
 						<span><input class="user" type="text" placeholder="Username" id="user"></span>
@@ -34,24 +34,50 @@
 						<span><input class="email" type="email" placeholder="Email" id="email"></span>
 					</p>
 					<p>
-						<label class="visuallyhidden" for="location">Location:</label>
-						<span><select class="location" id="location"></span>
-							<option  value="" disabled selected>Your location</option>
-							<option value="ny">New York</option>
-							<option value="warsaw">Warsaw</option>
-							<option value="berlin">Berlin</option>
-							<option value="tokyo">Tokyo</option>
-						</select>
+						<a class="styled-select">
+							<label class="visuallyhidden" for="location">Location:</label>
+							<span><select class="location" id="location"></span>
+								<option value="" disabled selected hidden>Your location</option>
+								<option value="ny">New York</option>
+								<option value="warsaw">Warsaw</option>
+								<option value="berlin">Berlin</option>
+								<option value="tokyo">Tokyo</option>
+							</select>
+						</a>
 					</p>
 					<p class="terms">
-						<input type="checkbox" id="terms">
+						<input type="checkbox" checked id="terms">
 						<label for="terms"><span>I have read and accept the terms of use.</span></label>
 					</p>
 					<button class="submit" type="submit">Sign up</button>
-
+				</form>
+			</div>
+			<div class="mail-form">
+				<header>
+					<h2>Send Email</h2>
+				</header>
+				<form class="register" method="">
+					<p>
+						<label class="visuallyhidden" for="name">Your name:</label>
+						<span><input class="user" type="text" placeholder="Your name" id="name"></span>
+					</p>
+					<p>
+						<label class="visuallyhidden" for="email">Your Email:</label>
+						<span><input class="email" type="email" placeholder="Your Email" id="email"></span>
+					</p>
+					<p>
+						<label class="visuallyhidden" for="message">Type your message:</label>
+						<textarea class="message" placeholder="Type your message..." id="message"></textarea>
+					</p>
+					<p class="terms">
+						<input type="checkbox" id="copy" checked>
+						<label for="copy"><span>Send a copy for my Email</span></label>
+					</p>
+					<button class="submit" type="submit">Send Email</button>
 				</form>
 			</div>
 		</div>
+
 		<div class="column"></div>
 	</div>
 </body>
