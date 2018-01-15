@@ -23,6 +23,7 @@ body {
 	background-image: url('img/background.jpg');
 	background-position: top center;
 	background-repeat: no-repeat;
+	background-size: cover;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 16px;
 	letter-spacing: 1px;
@@ -45,17 +46,27 @@ body > header {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
 }
 
 .column {
+	margin: 0 auto;
 	width:  420px;
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
+}
+
+.form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 header {
@@ -76,6 +87,9 @@ form {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	width: 380px;
 	border-radius: 5px;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(56%, rgba(248,248,248,1)),color-stop(100%, rgba(243,243,243,1)),to(rgba(243,243,243,1)));
@@ -155,6 +169,7 @@ textarea {
 	width: 100%;
 	height: 230px;
 	margin: 10px 0;	
+	font-family: 'Titillium Web', sans-serif;
 	font-size: 16px;
 	letter-spacing: 1px;
 	color: #7f7f7f;
@@ -234,24 +249,27 @@ input[type=checkbox] {
   display: none;
 }
 
-.terms {
+.checkbox {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 100%;
 }
-.terms label {
+.checkbox label {
 	display: inline-block;
 	position: relative;
 	padding-left: 40px;
 	margin-right: 15px;
-	margin-bottom: 15px;
+/* 	margin-bottom: 15px; */
 	height: 25px;
 	font-size: 17px;
 	cursor: pointer;
 }
 
-.terms label:before {
+.checkbox label:before {
 	position: absolute;
 	left: 0;	
 	margin-right: 10px;
@@ -265,7 +283,7 @@ input[type=checkbox] {
 	background: linear-gradient(to bottom, rgba(248,248,248,1) 56%,rgba(243,243,243,1) 100%,rgba(243,243,243,1) 100%);
 }
 
-.terms span:after {
+.checkbox span:after {
 	content: none;
 }
 
@@ -284,8 +302,7 @@ input[type=checkbox]:checked + label:after {
 	background: linear-gradient(to bottom, rgba(173,220,84,1) 0%,rgba(126,195,31,1) 100%);
 }
 
-.terms label:hover, .terms label:focus {
-	
+.checkbox label:hover, .checkbox label:focus {
 	text-decoration: underline;
 }
 input[type=checkbox]:checked + label {
@@ -293,6 +310,7 @@ input[type=checkbox]:checked + label {
 }
 
 .submit {
+	margin-top: 15px;
 	height: 50px;
 	width: 100%;
 	background: -webkit-gradient(linear, left top, left bottom, from(rgba(173,220,84,1)),to(rgba(126,195,31,1)));
@@ -309,3 +327,8 @@ input[type=checkbox]:checked + label {
 	background: linear-gradient(to bottom, rgba(45,118,0,1) 0%,rgba(25,60,0,1) 75%);
 }
 
+.signin button {
+	margin-top: 0;
+	margin-left:  auto;
+	width: 140px;
+}
