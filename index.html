@@ -8,7 +8,6 @@
 </head>
 <body>
 	<header>
-		<img src="logo.png" alt="">
 	</header>
 	<div class="wrapper">
 		<div class="column">
@@ -56,7 +55,7 @@
 				<header>
 					<h2>Send Email</h2>
 				</header>
-				<form class="register" method="">
+				<form class="mail" method="">
 					<p>
 						<label class="visuallyhidden" for="name">Your name:</label>
 						<span><input class="user" type="text" placeholder="Your name" id="name"></span>
@@ -99,8 +98,44 @@
 					</p>
 				</form>
 			</div>
-			
 
+			<div class="recover-form form">
+				<header>
+					<h2>Recover Form</h2>
+				</header>
+				<form class="recover" method="">
+					<p>
+						<label class="visuallyhidden" for="email">Enter your Email</label>
+						<span><input class="email" type="email" placeholder="Enter your Email" id="email"></span>
+					</p>
+					<p>
+						<label class="visuallyhidden" for="phone">Enter your Phone number:</label>
+						<span><input class="phone" type="tel" placeholder="Enter your Phone number" id="phone"></span>
+					</p>
+					<p class="buttons">
+						<button class="submit" type="submit">Sign in</button>
+						<button class="submit done" type="submit" disabled>Done</button>
+					</p>
+				</form>
+			</div>
+
+			<div class="subscribe-form form">
+				<header>
+					<h2>Subscribe Form</h2>
+				</header>
+				<form class="subscribe" method="">
+					<p>
+						<label class="visuallyhidden" for="email">Enter your Email</label>
+						<span><input class="email" type="email" placeholder="Enter your Email" id="email"></span>
+					</p>
+					<p class="buttons">
+						<button class="submit" type="submit">Sign in</button>
+						<button class="submit refuse" type="submit">No, Thanks</button>
+					</p>
+				</form>
+			</div>
+			<div class="credits">
+			</div>
 		</div>
 	</div>
 </body>
