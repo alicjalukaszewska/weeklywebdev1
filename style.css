@@ -145,15 +145,6 @@ input {
 	background-position: 17px center;
 }
 
-input:hover, input:focus, textarea:hover, textarea:focus {
-	background-color: #f4f4f4;
-	color: #7f7f7f;
-}
-
-input:focus, textarea:focus {
-	border: 1px solid #3b9a00;
-}
-
 
 input::-webkit-input-placeholder {
 	opacity: 1;
@@ -194,12 +185,56 @@ textarea {
 	background-position: 17px center;
 }
 
+textarea::-webkit-input-placeholder {
+	opacity: 1;
+	color:  #afafaf;
+}
+
+textarea:-ms-input-placeholder {
+	opacity: 1;
+	color:  #afafaf;
+}
+
+textarea::-ms-input-placeholder {
+	opacity: 1;
+	color:  #afafaf;
+}
+
+textarea::placeholder {
+	opacity: 1;
+	color:  #afafaf;
+}
+
+input:hover::-webkit-input-placeholder, input:focus::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+	color: #7f7f7f;
+}
+
+input:hover:-ms-input-placeholder, input:focus:-ms-input-placeholder, textarea:hover:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+	color: #7f7f7f;
+}
+
+input:hover::-ms-input-placeholder, input:focus::-ms-input-placeholder, textarea:hover::-ms-input-placeholder, textarea:focus::-ms-input-placeholder {
+	color: #7f7f7f;
+}
+
+input:hover::placeholder, input:focus::placeholder, textarea:hover::placeholder, textarea:focus::placeholder {
+	color: #7f7f7f;
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus {
+	color: #7f7f7f;
+	background-color: #f4f4f4;
+}
+
+input:focus, textarea:focus {
+	border: 1px solid #3b9a00;
+}
+
 .styled-select {
 	display: block;
-	color: #7f7f7f;
 	margin: 10px 0;	
 	width: 100%;
-	height: 34px;
+	height: 42px;
 	overflow: hidden;
 	background: url('img/icons/arrow.svg') no-repeat;
 	background-position: calc(100% - 17px) center;
@@ -231,33 +266,51 @@ select {
 	-webkit-appearance: none;
 }
 
-option{  
+select:hover, select:focus {
 	color: #7f7f7f;
+}
+
+option{  
 	display: block;
 	width: calc(100% - 50px);
 }
+
 
 .user {
 	background-image: url('img/icons/user.svg');
 	margin-top: 0;
 }
+.user.filled, .user:hover, .user:focus {
+	background-image: url('img/icons/user-hover.svg');
+}
 
 .password {
 	background-image: url('img/icons/lock.svg');
+}
+.password.filled, .password:hover, .password:focus {
+	background-image: url('img/icons/lock-hover.svg');
 }
 
 .email {
 	background-image: url('img/icons/email.svg');
 }
+.email.filled, .email:hover, .email:focus {
+	background-image: url('img/icons/email-hover.svg');
+}
 
 .location {
 	background-image: url('img/icons/location.svg');
+}
+.location.password, .location:hover, .location:focus {
+	background-image: url('img/icons/location-hover.svg');
 }
 
 .phone {
 	background-image: url('img/icons/phone.svg');
 }
-
+.phone.password, .phone:hover, .phone:focus {
+	background-image: url('img/icons/phone-hover.svg');
+}
 
 /* checkbox styling; */
 
@@ -418,7 +471,7 @@ button:hover[disabled] {
     -ms-flex-align: center;
         align-items: center;
 	}
-	
+
 	form {
 		width: 500px;
 	}
